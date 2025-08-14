@@ -11,12 +11,11 @@ window.addEventListener('message', (event) => {
             const newHeight = event.data.height + 10;
             const newWidth = event.data.width + 10;
 
-            console.log('Found iframe:', iframe);
-            console.log('Setting iframe height to:', event.data.height + 'px');
-            console.log('Setting iframe width to:', event.data.width + 'px'); // New line for width
+            console.log('Setting iframe height to:', newHeight + 'px');
+            console.log('Setting iframe width to:', newWidth + 'px');
 
-            iframe.style.height = event.data.height + 'px';
-            iframe.style.width = event.data.width + 'px'; // New line for width
+            iframe.style.height = newHeight + 'px';
+            iframe.style.width = newWidth + 'px';
         } else {
             console.error('Error: iframe with ID "adventureDbIframe" not found!');
         }
@@ -25,4 +24,3 @@ window.addEventListener('message', (event) => {
     }
 });
 console.log('Silly Tavern iframe resize listener loaded.');
-
