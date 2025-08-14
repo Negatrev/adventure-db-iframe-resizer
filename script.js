@@ -2,7 +2,6 @@ window.addEventListener('message', (event) => {
     console.log('Message received in Silly Tavern:', event);
 
     // Ensure the message is from your iframe and has the expected type
-    // The event.origin should now be 'https://10.99.1.10:5002'
     if (event.origin === 'https://10.99.1.10:5002' && event.data.type === 'iframe-resize') {
         console.log('Received iframe-resize message:', event.data);
 
@@ -10,7 +9,10 @@ window.addEventListener('message', (event) => {
         if (iframe) {
             console.log('Found iframe:', iframe);
             console.log('Setting iframe height to:', event.data.height + 'px');
+            console.log('Setting iframe width to:', event.data.width + 'px'); // New line for width
+
             iframe.style.height = event.data.height + 'px';
+            iframe.style.width = event.data.width + 'px'; // New line for width
         } else {
             console.error('Error: iframe with ID "adventureDbIframe" not found!');
         }
