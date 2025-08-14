@@ -7,9 +7,9 @@ window.addEventListener('message', (event) => {
 
         const iframe = document.getElementById('adventureDbIframe');
         if (iframe) {
-            // Add 10 pixels to both height and width
-            const newHeight = event.data.height + 10;
-            const newWidth = event.data.width + 10;
+            // Set iframe dimensions directly to reported values (they now include padding)
+            const newHeight = event.data.height; // Removed + 10
+            const newWidth = event.data.width;   // Removed + 10
 
             console.log('Setting iframe height to:', newHeight + 'px');
             console.log('Setting iframe width to:', newWidth + 'px');
