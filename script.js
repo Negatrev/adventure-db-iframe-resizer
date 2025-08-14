@@ -1,15 +1,14 @@
 window.addEventListener('message', (event) => {
     console.log('Message received in Silly Tavern:', event);
 
-    // Ensure the message is from your iframe and has the expected type
     if (event.origin === 'https://10.99.1.10:5002' && event.data.type === 'iframe-resize') {
         console.log('Received iframe-resize message:', event.data);
 
         const iframe = document.getElementById('adventureDbIframe');
         if (iframe) {
-            // Set iframe dimensions directly to reported values (they now include padding)
-            const newHeight = event.data.height; // Removed + 10
-            const newWidth = event.data.width;   // Removed + 10
+            // Add fixed offsets to compensate for minor discrepancies
+            const newHeight = event.data.height + 2; // Add 2px for height
+            const newWidth = event.data.width + 10; // Add 10px for width
 
             console.log('Setting iframe height to:', newHeight + 'px');
             console.log('Setting iframe width to:', newWidth + 'px');
