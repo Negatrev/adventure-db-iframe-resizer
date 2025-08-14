@@ -7,6 +7,10 @@ window.addEventListener('message', (event) => {
 
         const iframe = document.getElementById('adventureDbIframe');
         if (iframe) {
+            // Add 10 pixels to both height and width
+            const newHeight = event.data.height + 10;
+            const newWidth = event.data.width + 10;
+
             console.log('Found iframe:', iframe);
             console.log('Setting iframe height to:', event.data.height + 'px');
             console.log('Setting iframe width to:', event.data.width + 'px'); // New line for width
@@ -21,3 +25,4 @@ window.addEventListener('message', (event) => {
     }
 });
 console.log('Silly Tavern iframe resize listener loaded.');
+
