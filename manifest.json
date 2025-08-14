@@ -1,8 +1,10 @@
 {
-    "name": "Adventure DB Iframe Resizer",
+    "display_name": "Adventure DB Iframe Resizer",
     "description": "Resizes the Adventure DB iframe dynamically.",
-    "version": "1.1.0",
-    "author": "Your Name/Gemini",
-    "entrypoint": "script.js",
-    "type": "ui_extension"
+    "version": "1.0.0",
+    "author": "Your Negatrev",
+    "js": "script.js",
+    "type": "ui_extension",
+    "homepage": "https://github.com/Negatrev/adventure-db-iframe-resizer",
+    "auto_update": true
 }
