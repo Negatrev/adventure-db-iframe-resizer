@@ -7,8 +7,8 @@ window.addEventListener('message', (event) => {
         const iframe = document.getElementById('adventureDbIframe');
         if (iframe) {
             // Add fixed offsets to compensate for minor discrepancies
-            const newHeight = event.data.height + 10; // Add 2px for height
-            const newWidth = event.data.width + 20; // Add 10px for width
+            const newHeight = event.data.height + 2; // Add 2px for height
+            const newWidth = event.data.width + 10; // Add 10px for width
 
             console.log('Setting iframe height to:', newHeight + 'px');
             console.log('Setting iframe width to:', newWidth + 'px');
@@ -23,4 +23,5 @@ window.addEventListener('message', (event) => {
     }
 });
 console.log('Silly Tavern iframe resize listener loaded.');
+
 
